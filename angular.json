@@ -14,18 +14,22 @@
           "skipTests": true
         },
         "@schematics/angular:directive": {
+          "flat": false,
           "skipTests": true
         },
         "@schematics/angular:guard": {
+          "flat": false,
           "skipTests": true
         },
         "@schematics/angular:module": {
           "skipTests": true
         },
         "@schematics/angular:pipe": {
+          "flat": false,
           "skipTests": true
         },
         "@schematics/angular:service": {
+          "flat": false,
           "skipTests": true
         }
       },
