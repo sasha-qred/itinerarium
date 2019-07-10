@@ -16,6 +16,13 @@ const routes: Route[] = [
         (m) => m.NoneRoutingDataModule,
       ),
   },
+  {
+    path: 'resolved-routing-data',
+    loadChildren: () =>
+      import('./modules/features/resolved-routing-data/index').then(
+        (m) => m.ResolvedRoutingDataModule,
+      ),
+  },
 ];
 
 @NgModule({
