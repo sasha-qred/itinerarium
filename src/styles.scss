@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+:root,
+select {
+  font-size: 125%;
+}
+
+a {
+  color: black;
+  text-decoration: underline lightpink;
+  &.active {
+    color: lightpink;
+  }
+}

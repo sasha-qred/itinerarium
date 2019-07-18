@@ -1,0 +1,13 @@
+ul {
+  padding: 0;
+  word-break: keep-all;
+}
+
+li {
+  display: inline;
+  &:not(:last-child)::after {
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
+    content: '\\';
+  }
+}
