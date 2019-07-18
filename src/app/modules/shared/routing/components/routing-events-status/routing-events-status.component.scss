@@ -1,0 +1,21 @@
+ul {
+  padding: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+li {
+  display: inline;
+  &:not(:last-child)::after {
+    padding-right: 0.25rem;
+    content: ', ';
+  }
+  &:last-child::after {
+    content: '.';
+  }
+}

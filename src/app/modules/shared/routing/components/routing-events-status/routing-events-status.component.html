@@ -1,1 +1,5 @@
-<p>{{ eventsHistory$ | async }}</p>
+<ul>
+  <ng-template ngFor [ngForOf]="eventsHistory$ | async" let-event>
+    <li>{{ event }}</li>
+  </ng-template>
+</ul>
