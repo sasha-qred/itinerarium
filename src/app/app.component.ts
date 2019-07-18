@@ -37,5 +37,9 @@ export class AppComponent {
       route: '/query-resolve/reload',
       label: 'query-resolve/reload',
     },
+    {
+      route: '/lazy',
+      label: 'lazy',
+    },
   ];
 }

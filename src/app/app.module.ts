@@ -32,6 +32,11 @@ const routes: Route[] = [
         (m) => m.QueryResolveModule,
       ),
   },
+  {
+    path: 'lazy',
+    loadChildren: () =>
+      import('./modules/features/lazy/index').then((m) => m.LazyModule),
+  },
 ];
 
 @NgModule({
