@@ -33,5 +33,9 @@ export class AppComponent {
       route: '/query-resolve/rerun-guards-custom',
       label: 'query-resolve/rerun-guards-custom',
     },
+    {
+      route: '/query-resolve/reload',
+      label: 'query-resolve/reload',
+    },
   ];
 }

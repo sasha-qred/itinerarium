@@ -33,6 +33,14 @@ const routes: Route[] = [
           currentLocaleTime: CurrentTimeWithLocaleResolver,
         },
       },
+      {
+        path: 'reload',
+        component: containers.PageReloadComponent,
+        resolve: {
+          currentLocaleTime: CurrentTimeWithLocaleResolver,
+        },
+        runGuardsAndResolvers: 'always',
+      },
     ],
   },
 ];
