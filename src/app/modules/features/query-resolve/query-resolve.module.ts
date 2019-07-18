@@ -13,6 +13,11 @@ const routes: Route[] = [
     children: [
       {
         path: '',
+        pathMatch: 'full',
+        redirectTo: 'base',
+      },
+      {
+        path: 'base',
         component: containers.QueryChangerComponent,
         resolve: {
           currentLocaleTime: CurrentTimeWithLocaleResolver,

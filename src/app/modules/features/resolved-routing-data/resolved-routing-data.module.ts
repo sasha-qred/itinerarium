@@ -7,6 +7,11 @@ import { CurrentTimeResolver } from './resolvers';
 const routes: Route[] = [
   {
     path: '',
+    pathMatch: 'full',
+    redirectTo: 'base',
+  },
+  {
+    path: 'base',
     component: containers.ResolvedDataComponent,
     resolve: {
       currentTime: CurrentTimeResolver,

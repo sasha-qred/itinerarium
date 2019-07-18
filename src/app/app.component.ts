@@ -18,12 +18,20 @@ export class AppComponent {
       label: 'resolved-routing-data',
     },
     {
+      route: '/resolved-routing-data/base',
+      label: 'resolved-routing-data/base',
+    },
+    {
       route: '/resolved-routing-data/snapshot',
       label: 'resolved-routing-data/snapshot',
     },
     {
       route: '/query-resolve',
       label: 'query-resolve',
+    },
+    {
+      route: '/query-resolve/base',
+      label: 'query-resolve/base',
     },
     {
       route: '/query-resolve/rerun-guards',
