@@ -1,0 +1,12 @@
+<select (change)="onLocaleChange($event.target.value)">
+  <option>Choose locale</option>
+  <ng-template ngFor [ngForOf]="availableLocales" let-locale>
+    <option [value]="locale">{{ locale }}</option>
+  </ng-template>
+</select>
+
+<a routerLink="./" [queryParams]="{ a: 1 }" queryParamsHandling="merge">
+  Same page link
+</a>
+
+<p [innerHtml]="(currentTime$ | async).italics()"></p>

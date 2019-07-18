@@ -26,6 +26,13 @@ const routes: Route[] = [
         },
         runGuardsAndResolvers: 'paramsOrQueryParamsChange',
       },
+      {
+        path: 'rerun-guards-custom',
+        component: containers.QueryListenerComponent,
+        resolve: {
+          currentLocaleTime: CurrentTimeWithLocaleResolver,
+        },
+      },
     ],
   },
 ];
