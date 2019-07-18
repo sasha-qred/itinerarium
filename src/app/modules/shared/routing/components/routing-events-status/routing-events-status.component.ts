@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Event, Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { map, pluck, scan } from 'rxjs/operators';
+import { filter, pluck, scan, switchMap, window } from 'rxjs/operators';
 
 @Component({
   selector: 'routing-events-status',
@@ -9,13 +9,24 @@ import { map, pluck, scan } from 'rxjs/operators';
   styleUrls: ['./routing-events-status.component.scss'],
 })
 export class RoutingEventsStatusComponent {
-  public readonly eventsHistory$: Observable<any>;
+  public readonly eventsHistory$: Observable<string[]>;
 
   constructor(router: Router) {
-    this.eventsHistory$ = router.events.pipe(
-      pluck('constructor', 'name'),
-      scan((history, eventName) => [eventName, ...history], []),
-      map((history) => history.slice(0, 3)),
+    const events$ = router.events.pipe(
+      pluck<Event, string>('constructor', 'name'),
+    );
+
+    const scrollEvent$ = events$.pipe(
+      filter((eventName) => eventName === 'Scroll'),
+    );
+
+    this.eventsHistory$ = events$.pipe(
+      window(scrollEvent$),
+      switchMap((eventName$) => {
+        return eventName$.pipe(
+          scan((history, eventName) => [eventName, ...history], []),
+        );
+      }),
     );
   }
 }
