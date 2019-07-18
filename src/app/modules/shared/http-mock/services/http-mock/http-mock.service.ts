@@ -7,7 +7,7 @@ import zh_cnLocale from 'date-fns/locale/zh_cn';
 import { of, pipe } from 'rxjs';
 import { delay, map } from 'rxjs/operators';
 
-type Locale = 'de' | 'en' | 'ru' | 'zh_cn';
+export type Locale = 'de' | 'en' | 'ru' | 'zh_cn';
 type DateInfo = string | number | Date;
 
 @Injectable({
