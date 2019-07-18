@@ -39,7 +39,7 @@ export class HttpMockService {
   private dateFormat(locale: Locale) {
     return pipe(
       map((timestamp: DateInfo) =>
-        format(timestamp, 'Do MMMM YYYY HH:mm', {
+        format(timestamp, 'Do MMMM YYYY HH:mm:ss', {
           locale: this.getLocale(locale),
         }),
       ),
