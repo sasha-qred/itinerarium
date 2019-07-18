@@ -21,5 +21,9 @@ export class AppComponent {
       route: '/resolved-routing-data/snapshot',
       label: 'resolved-routing-data/snapshot',
     },
+    {
+      route: '/query-resolve',
+      label: 'query-resolve',
+    },
   ];
 }

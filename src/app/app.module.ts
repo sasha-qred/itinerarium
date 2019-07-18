@@ -25,6 +25,13 @@ const routes: Route[] = [
         (m) => m.ResolvedRoutingDataModule,
       ),
   },
+  {
+    path: 'query-resolve',
+    loadChildren: () =>
+      import('./modules/features/query-resolve/index').then(
+        (m) => m.QueryResolveModule,
+      ),
+  },
 ];
 
 @NgModule({
