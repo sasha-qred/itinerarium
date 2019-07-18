@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Route, RouterModule } from '@angular/router';
 import { NavigationModule } from '@shared/navigation';
+import { RoutingModule } from '@shared/routing';
 import { AppComponent } from './app.component';
 
 const routes: Route[] = [
@@ -28,7 +29,12 @@ const routes: Route[] = [
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, RouterModule.forRoot(routes), NavigationModule],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(routes),
+    NavigationModule,
+    RoutingModule,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
